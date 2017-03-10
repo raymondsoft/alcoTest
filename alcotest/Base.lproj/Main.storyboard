@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wG8-wf-Ru7">
-                                <rect key="frame" x="42.5" y="120" width="103.5" height="113.5"/>
+                                <rect key="frame" x="42.5" y="120" width="102.5" height="113.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wG8-wf-Ru7" secondAttribute="height" multiplier="1:1.1" id="P6C-uE-7ui"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M8-7Z-5ue">
-                                <rect key="frame" x="73" y="233.5" width="42" height="20"/>
+                                <rect key="frame" x="73.5" y="233.5" width="42" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Eir-96-t0F"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPt-xd-0gc">
-                                <rect key="frame" x="126" y="233.5" width="20" height="20"/>
+                                <rect key="frame" x="125" y="233.5" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="lC7-VP-Gyc"/>
@@ -59,20 +59,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBL-Oo-WNm">
-                                <rect key="frame" x="229.5" y="120.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="230" y="120" width="102.5" height="113.5"/>
                                 <state key="normal" title="wineButton" image="vinrouge2"/>
                                 <connections>
                                     <action selector="drinkGlassAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0r-h0-S2z"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9V-Uo-wKi">
-                                <rect key="frame" x="260" y="234" width="42" height="20"/>
+                                <rect key="frame" x="261" y="233.5" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQu-af-Geh">
-                                <rect key="frame" x="313" y="234" width="20" height="20"/>
+                                <rect key="frame" x="312.5" y="233.5" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="-">
@@ -83,20 +83,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF9-ud-oc1">
-                                <rect key="frame" x="42.5" y="320.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="42.5" y="320.5" width="102.5" height="113"/>
                                 <state key="normal" title="whiskyButton" image="whiskycarre2"/>
                                 <connections>
                                     <action selector="drinkGlassAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9WC-er-CFp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tk-Sp-nd9">
-                                <rect key="frame" x="73" y="434" width="42" height="20"/>
+                                <rect key="frame" x="73.5" y="433.5" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qv-y5-rjk">
-                                <rect key="frame" x="126" y="434" width="20" height="20"/>
+                                <rect key="frame" x="125" y="433.5" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="-">
@@ -107,13 +107,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-rK-9Bp">
-                                <rect key="frame" x="260" y="434" width="42" height="20"/>
+                                <rect key="frame" x="261" y="433.5" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-zu-YjU">
-                                <rect key="frame" x="313" y="434" width="20" height="20"/>
+                                <rect key="frame" x="312.5" y="433.5" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="-">
@@ -124,13 +124,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 g/l" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifJ-lx-qup">
-                                <rect key="frame" x="158" y="565" width="59.5" height="36"/>
+                                <rect key="frame" x="158" y="564.5" width="59.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iDk-5d-tOr">
-                                <rect key="frame" x="126" y="631.5" width="124" height="2"/>
+                                <rect key="frame" x="125.5" y="631.5" width="124" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNJ-Nz-aLR">
                                 <rect key="frame" x="311" y="603.5" width="30" height="30"/>
@@ -164,14 +164,14 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLA-3D-Dfa">
-                                <rect key="frame" x="229.5" y="320.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="230" y="320.5" width="102.5" height="113"/>
                                 <state key="normal" title="portoButton" image="porto2"/>
                                 <connections>
                                     <action selector="drinkGlassAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7i-eu-sQI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIO-4j-GiL">
-                                <rect key="frame" x="124.5" y="79.5" width="127.5" height="20.5"/>
+                                <rect key="frame" x="124" y="79.5" width="127.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,16 +188,16 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biere-1" translatesAutoresizingMaskIntoConstraints="NO" id="q11-gM-bNT">
-                                <rect key="frame" x="47.5" y="125" width="103.5" height="113.5"/>
+                                <rect key="frame" x="47.5" y="125" width="102.5" height="113.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vinrouge2" translatesAutoresizingMaskIntoConstraints="NO" id="IK8-Dt-2I4">
-                                <rect key="frame" x="231.5" y="122.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="232" y="122" width="102.5" height="113.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiskycarre2" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-al-U9J">
-                                <rect key="frame" x="44.5" y="322.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="44.5" y="322.5" width="102.5" height="113"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="porto2" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-iK-Dpd">
-                                <rect key="frame" x="231.5" y="322.5" width="103.5" height="113.5"/>
+                                <rect key="frame" x="232" y="322.5" width="102.5" height="113"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -364,7 +364,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlcoolemieRate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3De-WY-01h">
-                                <rect key="frame" x="37.5" y="619" width="300" height="14.5"/>
+                                <rect key="frame" x="37.5" y="618.5" width="300" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Pk0-mm-6hr"/>
                                 </constraints>
@@ -373,25 +373,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfK-ET-2Hz">
-                                <rect key="frame" x="27.5" y="351" width="320" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="iVP-36-INJ"/>
-                                </constraints>
+                                <rect key="frame" x="19" y="351" width="337.5" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bKt-lu-b5I" firstAttribute="bottom" secondItem="B2M-jP-6ec" secondAttribute="top" multiplier="0.95" id="3So-xi-kIH"/>
                             <constraint firstItem="3De-WY-01h" firstAttribute="centerX" secondItem="0hB-H0-NV2" secondAttribute="centerX" id="4oG-2N-ciz"/>
-                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0hB-H0-NV2" secondAttribute="trailingMargin" multiplier="0.95" id="5ao-rO-T0K"/>
                             <constraint firstItem="0jk-7O-aNI" firstAttribute="top" secondItem="Kro-Fa-2iK" secondAttribute="bottom" multiplier="2" id="COd-eH-Rtl"/>
+                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="width" secondItem="0hB-H0-NV2" secondAttribute="width" multiplier="0.45" id="OkS-2P-7Uu"/>
                             <constraint firstItem="3De-WY-01h" firstAttribute="bottom" secondItem="B2M-jP-6ec" secondAttribute="top" multiplier="0.95" id="UuA-bK-nMd"/>
+                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="width" secondItem="0hB-H0-NV2" secondAttribute="width" multiplier="0.9" id="WJn-9T-1ew"/>
+                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="centerX" secondItem="0hB-H0-NV2" secondAttribute="centerX" multiplier="1.5" id="YoD-jh-bCS"/>
                             <constraint firstItem="B2M-jP-6ec" firstAttribute="top" secondItem="EfK-ET-2Hz" secondAttribute="bottom" constant="100" id="fAQ-Xo-CbL"/>
-                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="centerX" secondItem="0hB-H0-NV2" secondAttribute="centerX" priority="750" id="h7W-C9-PrY"/>
+                            <constraint firstItem="EfK-ET-2Hz" firstAttribute="centerX" secondItem="0hB-H0-NV2" secondAttribute="centerX" id="h7W-C9-PrY"/>
                             <constraint firstItem="bKt-lu-b5I" firstAttribute="trailing" secondItem="0hB-H0-NV2" secondAttribute="trailingMargin" multiplier="0.95" id="iIn-Wv-cyG"/>
                             <constraint firstItem="0jk-7O-aNI" firstAttribute="centerX" secondItem="0hB-H0-NV2" secondAttribute="centerX" id="k3o-fo-OZ9"/>
                             <constraint firstItem="3De-WY-01h" firstAttribute="width" secondItem="0hB-H0-NV2" secondAttribute="width" multiplier="0.8" id="yAN-jJ-G5c"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OkS-2P-7Uu"/>
+                                <exclude reference="WJn-9T-1ew"/>
+                                <exclude reference="YoD-jh-bCS"/>
+                                <exclude reference="h7W-C9-PrY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="OkS-2P-7Uu"/>
+                                <include reference="YoD-jh-bCS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="WJn-9T-1ew"/>
+                                <include reference="h7W-C9-PrY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="AlcoholemieRate" destination="3De-WY-01h" id="haV-yI-3Sa"/>
