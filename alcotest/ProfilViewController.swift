@@ -86,6 +86,12 @@ class ProfilViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         weightPickerView.selectRow( (utilisateur.weight/5) - 1 , inComponent: 0, animated: true)
         self.weightLabel.text = "Votre poids : \(self.utilisateur.weight) kg"
         self.AlcoholemieRate.text = "Taux d'alcoolémie avant les changements : \(self.utilisateur.alcoholRate.toFormattedString(2)!) g/l"
+        
+        if(utilisateur.gender == Gender.man){
+            genderSegmentedControl.tintColor = UIColor.blue
+        } else {
+            genderSegmentedControl.tintColor = UIColor(colorLiteralRed: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        }
     }
     
     
@@ -96,6 +102,7 @@ class ProfilViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         else {
             utilisateur.gender = Gender.woman
         }
+        updateView()
     }
 //    
 //    override func viewWillDisappear(_ animated: Bool) {

@@ -14,6 +14,7 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var addBeerButton: UIButton!
     @IBOutlet weak var removeBeerButton: UIButton!
     @IBOutlet weak var drinkedBeerLabel: UILabel!
+    @IBOutlet weak var blurBeerImage: UIImageView!
     
     @IBOutlet weak var addWineButton: UIButton!
     @IBOutlet weak var removeWineButton: UIButton!
@@ -36,6 +37,9 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var alcoholLevelProgressView: UIProgressView!
     
     
+    @IBOutlet var AllElements: [UIView]!
+    
+    @IBOutlet var blurElements: [UIImageView]!
     
     // datas for lastDrinkPickerView
     var lastDrinkTime = [["1", "2", "3", "4", "5"] , ["H", "Min", "s"]]
@@ -47,22 +51,42 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Set pickerView delegates and dataSource
+        
         self.lastDrinkPickerView.delegate = self
         self.lastDrinkPickerView.dataSource = self
         
-        self.drinkedBeerLabel.text = "0"
-        self.drinkedWineLabel.text = "0"
-        self.drinkedWhiskyLabel.text = "0"
-        self.drinkedPortoLabel.text = "0"
         
-        self.user.nbOfGlasses = [0, 0, 0, 0]
+        
+        // Set removes Buttons round
+        
+        self.removeBeerButton.layer.cornerRadius = self.removeBeerButton.frame.width / 2
+        self.removeBeerButton.clipsToBounds = true
+        
+        self.removeWineButton.layer.cornerRadius = self.removeWineButton.frame.width / 2
+        self.removeWineButton.clipsToBounds = true
+        
+        self.removeWhiskyButton.layer.cornerRadius = self.removeWhiskyButton.frame.width / 2
+        self.removeWhiskyButton.clipsToBounds = true
+        
+        self.removePortoButton.layer.cornerRadius = self.removePortoButton.frame.width / 2
+        self.removePortoButton.clipsToBounds = true
+        
+        
+        self.removeBeerButton.imageView?.backgroundColor = UIColor.red
+        
+        // Set the drinks array
         
         drinks.append(Drink(name: "Bière", alcooholRate: 0.04, glassSize: 330))
         drinks.append(Drink(name: "Vin", alcooholRate: 0.12, glassSize: 120))
         drinks.append(Drink(name: "Whisky", alcooholRate: 0.40, glassSize: 50))
         drinks.append(Drink(name: "Porto", alcooholRate: 0.18, glassSize: 80))
         
-        updateView()
+        
+        
+        // the reset method updates Views
+        reset()
         
     }
 
@@ -72,15 +96,9 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    // --------   SEGUE METHODS     --------
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? ProfilViewController {
@@ -95,6 +113,7 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     
     // --------   FOR PICKERVIEW PROTOCOL     --------
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -107,6 +126,8 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         return lastDrinkTime[component][row]
     }
     
+    
+    // --------   BUTTONS ACTIONS     --------
 
     @IBAction func profileButtonPressed(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "moveToProfile", sender: self)
@@ -125,10 +146,21 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         updateView()
     }
     
+    @IBAction func resetButtonAction(_ sender: UIButton) {
+        reset()
+    }
+
+    
+    
+    // --------   UPDATES VIEW METHODS     ----------------------------------
+    
+    
     func updateView(){
         updateLabels()
         updateRate()
         updateAlcoholLevelProgressView()
+        updateBackgroundColor()
+        updateAlphaImages()
     }
     
     func updateLabels(){
@@ -155,7 +187,7 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func updateAlcoholLevelProgressView() {
         let alcoholeLevel : Float = Float(self.user.computeAlcooholRate(drinks: drinks) / maxAlcooholRate)
         self.alcoholLevelProgressView.progressTintColor = UIColor.blue
-        if (alcoholeLevel > Float(firstAlcooholRate)) {
+        if (alcoholeLevel > Float(firstAlcooholRate / maxAlcooholRate)) {
             self.alcoholLevelProgressView.progressTintColor = UIColor.orange
         }
         if(alcoholeLevel > 1 ){
@@ -164,7 +196,92 @@ class DrinkViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         self.alcoholLevelProgressView.setProgress(alcoholeLevel, animated: true)
     }
+    
+    func updateBackgroundColor(){
+        let ratioPercentage = user.alcoholRate/maxAlcooholRate
+        let ratio = ratioPercentage > 1.0 ? 1.0 : ratioPercentage
+ 
+        let red     = Float(ratio )
+        let green   = Float(1.0 - ratio)
+        let blue    = Float(0.0)
 
+        let backgroundColor = UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: 1.0)
+        print(backgroundColor)
+        self.view.backgroundColor = backgroundColor
+    }
+
+    func updateAlphaImages(){
+        let ratioPercentage = user.alcoholRate/maxAlcooholRate
+        let ratio = ratioPercentage > 1.0 ? 1.0 : ratioPercentage
+        
+//        self.blurBeerImage.alpha = CGFloat(ratio / 2)
+//        self.addBeerButton.imageView?.alpha = CGFloat(1 - (ratio / 2) )
+//        
+//        self.addBeerButton.layer.removeAllAnimations()
+//        self.blurBeerImage.layer.removeAllAnimations()
+        
+        
+        for element in AllElements {
+            element.alpha  = CGFloat(1 - (ratio / 2) )
+            element.layer.removeAllAnimations()
+        }
+        
+        for blurElement in blurElements {
+            blurElement.alpha = CGFloat(ratio / 2)
+            blurElement.layer.removeAllAnimations()
+        }
+        
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction.union(UIViewAnimationOptions.repeat.union(UIViewAnimationOptions.autoreverse)), animations: {
+            
+            for element in self.AllElements {
+                let rnd = Double(arc4random_uniform(UInt32(6)))
+                element.frame.origin.x += CGFloat((ratio) * 2 * (rnd - 3))
+                element.frame.origin.y += CGFloat((ratio) * 2 * (rnd - 3))
+            }
+            
+            for blurElement in self.blurElements {
+                let rnd = Double(arc4random_uniform(UInt32(6)))
+                blurElement.frame.origin.x -= CGFloat((ratio) * 2 * (rnd - 3))
+                blurElement.frame.origin.y -= CGFloat((ratio) * 2 * (rnd - 3))
+            }
+            
+//            self.addBeerButton.frame.origin.x += CGFloat((ratio)*2)
+//            self.blurBeerImage.frame.origin.x -= CGFloat((ratio)*2)
+//            self.addBeerButton.frame.origin.y += CGFloat((ratio)*2)
+//            self.blurBeerImage.frame.origin.y -= CGFloat((ratio)*2)
+        }, completion: nil)
+        
+//        
+//        UIView.animate(withDuration: 2, delay: 0, options: (UIViewAnimationOptions.repeat), animations: {
+//            self.addBeerButton.frame.origin.x += CGFloat((ratio)*50)
+//        }, completion: nil)
+        
+        
+    
+    }
+    
+    
+    // --------   OTHERS METHODS     --------
+    
+    func reset()
+    {
+        self.user.nbOfGlasses = [0, 0, 0, 0]
+        updateView()
+    }
     
 
+}
+
+extension UIImage{
+    
+    func alpha(_ value:CGFloat)->UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+        
+    }
 }

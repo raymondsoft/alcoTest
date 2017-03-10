@@ -1,8 +1,8 @@
 import Foundation
 
 // Paramètres pour toute l'application
-let maxAlcooholRate = 0.8 // taux max d'alcool autorisé
-let firstAlcooholRate = 0.5 // taux à partir duquel la jauge devient orange
+let maxAlcooholRate = 3.0 // taux max d'alcool autorisé
+let firstAlcooholRate = 1.5 // taux à partir duquel la jauge devient orange
 
 struct Drink {
     var name: String
